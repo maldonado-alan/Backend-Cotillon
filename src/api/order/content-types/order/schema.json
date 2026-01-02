@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "orderNumber": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "items": {
+      "type": "json"
+    },
+    "total": {
+      "type": "decimal",
+      "required": true
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": [
+        "pendiente",
+        "pagado",
+        "enviado",
+        "entregado",
+        "cancelado"
+      ]
+    },
+    "ShippingAddress": {
+      "type": "component",
+      "component": "shared.shiping-adress",
+      "repeatable": false
+    }
+  }
+}

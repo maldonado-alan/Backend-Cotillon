@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_shiping_adresses",
+  "info": {
+    "displayName": "Shiping-Adress"
+  },
+  "options": {},
+  "attributes": {
+    "Fullname": {
+      "type": "string",
+      "required": true
+    },
+    "calle": {
+      "type": "string",
+      "required": true
+    },
+    "ciudad": {
+      "type": "string"
+    },
+    "comuna": {
+      "type": "string"
+    },
+    "CodigoPostal": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
